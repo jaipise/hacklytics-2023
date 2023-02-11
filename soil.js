@@ -35,6 +35,16 @@ async function callSoilData() {
 
     let ph_temp = await data['properties']['layers'][1]['depths'][0]['values']['Q0.5']
     let ph = parseInt(ph_temp) / 10
+
+    map1.forEach(() => {
+        
+    })
+    
+    for (let i = 0; i < map1.keys.length; i++) {
+        let difference = 0
+
+        map1.get()
+    }
     
 
     console.log(ph)
