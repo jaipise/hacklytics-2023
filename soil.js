@@ -12,10 +12,11 @@ async function callSoilData() {
     let response = await fetch(url)
     let data = await response.json()
 
-    let nitrogen = await data['properties']['layers'][0]['depths'][0]['values']['Q0.5']
+    // let nitrogen = await data['properties']['layers'][0]['depths'][0]['values']['Q0.5']
 
     let ph_temp = await data['properties']['layers'][1]['depths'][0]['values']['Q0.5']
     let ph = parseInt(ph_temp) / 10
+    
 
     console.log(ph)
     return response
