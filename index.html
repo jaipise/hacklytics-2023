@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Naturely</title>
   </head>
   <body>
     <h1>Naturely</h1>
-    <input type="text" id="zipcode" />
     <br />
-    <button id="submitBtn">Submit</button>
+    <div class="form__group field">
+      <input
+        type="input"
+        class="form__field"
+        placeholder="Zipcode"
+        name="zipcode"
+        id="zipcode"
+        required
+      />
+      <label for="name" class="form__label">Zipcode</label>
+    </div>
   </body>
   <script src="soil.js"></script>
 </html>
