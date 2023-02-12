@@ -97,12 +97,12 @@ body {
 .button-51:before {
   background-color: #D5EDF6;
   content: "";
-  height: calc(100% + 3px);
+  height: 90%;
   position: absolute;
-  right: -7px;
-  top: -9px;
+  right: 2px;
+  top: 2px;
   transition: background-color 300ms ease-in;
-  width: 100%;
+  width: 95%;
   z-index: -1;
 }
 

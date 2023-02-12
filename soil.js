@@ -62,13 +62,11 @@ mapPlantTime.set('Pumpkin', 105);
 
 let submit = document.getElementById('submitBtn')
 submit.onclick = async function () {
-    console.log('test')
     state = await callSoilData()
 }
 
 async function callSoilData() {
     let zcode = document.getElementById("zipcode").value
-    console.log(zcode);
 
     let url1 = `https://forecast.weather.gov/zipcity.php?inputstring=${zcode}`
     let zip_url = await fetch(url1)
@@ -80,7 +78,6 @@ async function callSoilData() {
 
     let url = `https://rest.isric.org/soilgrids/v2.0/properties/query?lon=${lon}&lat=${lat}&property=nitrogen&property=phh2o&depth=0-5cm&value=Q0.5`
 
-    console.log('url' + url)
 
     let response = await fetch(url)
     let data = await response.json()
@@ -101,13 +98,11 @@ async function callSoilData() {
     })
 
     let val = document.getElementById('zipcode').value
-    console.log(val);
 
 
 
     let response2 = await fetch("http://ZiptasticAPI.com/" + zcode)
     let data2 = await response2.json()
-    console.log(data2.state)
 
 
     let stateMonthTemps =
@@ -175,7 +170,6 @@ async function callSoilData() {
 
     for (i = 0; i < 50; i++) {
         if (stateMonthTemps[i][0] == data2.state) {
-            console.log("2")
             for (j = 1; j < 13; j++) {
                 if (Math.abs(stateMonthTemps[i][j] - plantTemp) < minDif) {
                     minDif = Math.abs(stateMonthTemps[i][j] - plantTemp)
